@@ -1,0 +1,8 @@
+.build/
+.swiftpm/
+dist/
+*.dmg
+.DS_Store
+*.xcodeproj
+xcuserdata/
+firebase-debug.log
