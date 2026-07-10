@@ -51,7 +51,7 @@ macOS lays out status items **right to left**. Tuck owns three `NSStatusItem`s a
 - `.broken` (user ⌘-dragged separator right of toggle — collapsing would hide unreachable icons): refuse; modal alert **only if `userInitiated`**. Automatic paths (startup, rehide timer, outside click) skip silently.
 - `.indeterminate` (window origins equal/missing, i.e. right after launch): proceed — autosaved positions assert themselves. Never alert here (PITFALLS #6).
 
-**Expand** (`expand(peekAlwaysHidden:)`): separator → 20; always-hidden item → 20 only when peeking, else stays inflated; schedule rehide timer (2–120 s, default 15); start outside-click monitor if enabled. The rehide timer re-schedules instead of firing while any app window is key (user is in settings/onboarding).
+**Expand** (`expand(peekAlwaysHidden:)`): separator → 20; always-hidden item → 20 only when peeking, else stays inflated; schedule rehide timer if enabled (2–120 s, default 15); start outside-click monitor if enabled — both behaviors are off by default, opt-in via Settings → General. The rehide timer re-schedules instead of firing while any app window is key (user is in settings/onboarding).
 
 **Toggle click** (`toggleClicked`): `sendAction(on: [.leftMouseUp, .rightMouseUp])`, then branch on `NSApp.currentEvent`: right-click → context menu (assign menu → `performClick` → clear — a permanently assigned menu swallows left-clicks); option-click → peek; plain click → toggle.
 

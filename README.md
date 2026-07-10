@@ -21,7 +21,7 @@ Your menu bar fills up fast — especially on a MacBook with a notch. Tuck adds 
 
 - **One-click hide/show** of any menu bar icons you choose
 - **Always-hidden section** for icons you almost never need (option-click the chevron to peek)
-- **Auto-rehide** after a configurable delay, and when you click elsewhere
+- **Auto-rehide** (optional) after a configurable delay, and when you click elsewhere
 - **Hover to reveal** (optional) — just move your mouse to the menu bar
 - **Global hotkey** (default `⌥⌘\`) — toggle from anywhere, no permissions needed
 - **Launch at login**, native Liquid Glass UI, guided first-run tutorial

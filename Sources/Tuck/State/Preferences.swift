@@ -67,9 +67,11 @@ final class Preferences: ObservableObject {
         defaults.register(defaults: [
             Key.isCollapsed: false,
             Key.startBehavior: StartBehavior.remember.rawValue,
-            Key.autoRehideEnabled: true,
+            // Automatic tuck-away behaviors are opt-in: nothing should move
+            // the user's menu bar unless they asked for it.
+            Key.autoRehideEnabled: false,
             Key.autoRehideDelay: 15.0,
-            Key.collapseOnOutsideClick: true,
+            Key.collapseOnOutsideClick: false,
             Key.hoverToReveal: false,
             // Opt-in: enabling this inflates a second divider, which would
             // swallow every pre-existing icon to its left on first launch.
