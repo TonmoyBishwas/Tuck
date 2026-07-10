@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.0.1 — 2026-07-10
 
 ### Changed
 - Auto-rehide and hide-on-outside-click are now **off by default** (opt-in via Settings → General). Nothing moves the menu bar unless the user asked for it. Existing installs that already toggled these keep their choice.
